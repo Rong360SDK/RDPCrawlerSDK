@@ -1,0 +1,6 @@
+framework module RDPCrawlerSDK {
+  umbrella header "RDPCrawlerSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
