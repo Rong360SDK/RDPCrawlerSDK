@@ -1,1 +1,7 @@
 *.DS_Store
+*.lock
+Example/RDPCrawler/Pods
+*.xcworkspacedata
+Example/RDPCrawler/RDPCrawler.xcworkspace/xcuserdata
+*.xcscheme
+Example/RDPCrawler/RDPCrawler.xcodeproj/xcuserdata
