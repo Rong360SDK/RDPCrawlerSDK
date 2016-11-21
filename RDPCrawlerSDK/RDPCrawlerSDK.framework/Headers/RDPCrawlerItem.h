@@ -47,6 +47,7 @@ typedef NS_ENUM(NSUInteger, kRDPCrawlerStatus) {
  - kRDPCErrorCodeUninstallAlipay: 未安装支付宝
  - kRDPCErrorCodeCrawlerFailed:   抓取数据失败
  - kRDPCErrorCodeCrawlerOutTime:  抓取数据超时
+ - kRDPCErrorCodeCrawlerOther:    其它错误
  */
 typedef NS_ENUM(NSUInteger, kRDPCErrorCode) {
     kRDPCErrorCodeInitParamError = 1001,
@@ -54,6 +55,7 @@ typedef NS_ENUM(NSUInteger, kRDPCErrorCode) {
     kRDPCErrorCodeUninstallAlipay = 1003,
     kRDPCErrorCodeCrawlerFailed = 1004,
     kRDPCErrorCodeCrawlerOutTime = 1005,
+    kRDPCErrorCodeCrawlerOther = 1006,
 };
 
 @interface RDPCrawlerItem : NSObject
