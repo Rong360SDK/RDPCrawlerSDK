@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <Masonry.h>
 #import <RDPCrawlerSDK/RDPCrawlerManager.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -28,9 +27,8 @@
     _tblView.delegate = self;
     [self.view addSubview:_tblView];
     [_tblView setTableFooterView:[UIView new]];
-    [_tblView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
-    }];
+    _tblView.frame = self.view.bounds;
+    _tblView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self configData];
 }

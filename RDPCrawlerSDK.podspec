@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.author             = { "wanghuijian" => "wanghuijian@rong360.com" }
   s.ios.deployment_target = "7.0"
   s.source       = { :git => "https://github.com/whj5484138/RDPCrawlerSDK.git", :tag => "1.0.1" }
-  s.public_header_files = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/Headers/*.h'
+  #s.public_header_files = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/Headers/*.h'
   s.resource = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawler.bundle'
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
   s.frameworks = 'UIKit'
