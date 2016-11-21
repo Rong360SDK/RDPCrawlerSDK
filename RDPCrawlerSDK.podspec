@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RDPCrawlerSDK"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "A RDPCrawlerSDK of rong360, use for crawler data"
 
   # This description is used to generate tags and improve search results.
@@ -25,22 +25,19 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   抓取数据的sdk，目前只支持支付宝, 后续会持续添加其他抓取方式，集成时需要在info.plist的LSApplicationQueriesSchemes添加scheme:alipayqr
+                   抓取数据的sdk，支持支付宝和淘宝，集成时需要在info.plist的LSApplicationQueriesSchemes添加scheme:alipayqr
                    DESC
 
   s.homepage     = "https://github.com/whj5484138/RDPCrawlerSDK"
   s.license      = "MIT"
   s.author             = { "wanghuijian" => "wanghuijian@rong360.com" }
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/whj5484138/RDPCrawlerSDK.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/whj5484138/RDPCrawlerSDK.git", :tag => "1.0.1" }
   s.public_header_files = "RDPCrawlerSDK/RDPCrawlerSDK.framework/Headers/*.h
   s.resource = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawler.bundle'
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
   s.frameworks = 'UIKit'
   s.library = 'z'
-  s.dependency 'Masonry'
-  s.dependency 'FCUUID'
-  s.dependency 'UICKeyChainStore'
   s.requires_arc     = true
 
 end
