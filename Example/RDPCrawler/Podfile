@@ -1,5 +1,5 @@
 #use_frameworks!
 
 target 'RDPCrawler' do
-    pod 'RDPCrawlerSDK', '~> 1.0.1’
+    pod 'RDPCrawlerSDK'
 end

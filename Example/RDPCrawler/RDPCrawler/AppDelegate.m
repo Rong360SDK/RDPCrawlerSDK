@@ -25,7 +25,8 @@
     self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     
-    NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"申请的appid对应的私钥证书" ofType:@"p12"];
+    //私钥和appid未配置之前流程是跑不起来的, 请替换了之后再运行
+    NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"申请的appid对应的私钥证书名称" ofType:@"p12"];
     NSData *keyData = [NSData dataWithContentsOfFile:keyPath];
     [RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData];
     return YES;
