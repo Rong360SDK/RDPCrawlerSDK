@@ -21,11 +21,14 @@ a crawler sdk of rong360
 
   NSData *keyData = [NSData dataWithContentsOfFile:keyPath];
 
+  如私钥文件没有设置密码调用以下方法：
+
   [RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData];
+ 
+  如私钥文件设置了密码调用另一个方法:
 
-
-
-
+  [RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData password:@"私钥密码"];
+  
 
 4.调用所需类型的抓取服务
 
