@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D27305501DED34870007E8E8 /* testPrivateKey.p12 in Resources */ = {isa = PBXBuildFile; fileRef = D273054F1DED34870007E8E8 /* testPrivateKey.p12 */; };
 		D2C9E0D71DC724E600233A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C9E0D61DC724E600233A71 /* main.m */; };
 		D2C9E0DA1DC724E600233A71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C9E0D91DC724E600233A71 /* AppDelegate.m */; };
 		D2C9E0DD1DC724E600233A71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C9E0DC1DC724E600233A71 /* ViewController.m */; };
 		D2C9E0E21DC724E600233A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2C9E0E11DC724E600233A71 /* Assets.xcassets */; };
 		D2C9E0E51DC724E600233A71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C9E0E31DC724E600233A71 /* LaunchScreen.storyboard */; };
-		E4F85C806C63D66B15977080 /* Pods_RDPCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5F2681040D5DA1E76DCFA7 /* Pods_RDPCrawler.framework */; };
+		D802663D2A6DEC67C5FDE751 /* libPods-RDPCrawler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27271D2F927433DDA1925BC0 /* libPods-RDPCrawler.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B5F2681040D5DA1E76DCFA7 /* Pods_RDPCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RDPCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27271D2F927433DDA1925BC0 /* libPods-RDPCrawler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RDPCrawler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D5D53EA2078AD72E3561A1 /* Pods-RDPCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RDPCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-RDPCrawler/Pods-RDPCrawler.release.xcconfig"; sourceTree = "<group>"; };
+		D273054F1DED34870007E8E8 /* testPrivateKey.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testPrivateKey.p12; sourceTree = "<group>"; };
 		D2C9E0D21DC724E600233A71 /* RDPCrawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDPCrawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9E0D61DC724E600233A71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D2C9E0D81DC724E600233A71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4F85C806C63D66B15977080 /* Pods_RDPCrawler.framework in Frameworks */,
+				D802663D2A6DEC67C5FDE751 /* libPods-RDPCrawler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +74,7 @@
 		D2C9E0D41DC724E600233A71 /* RDPCrawler */ = {
 			isa = PBXGroup;
 			children = (
+				D273054F1DED34870007E8E8 /* testPrivateKey.p12 */,
 				D2C9E0D81DC724E600233A71 /* AppDelegate.h */,
 				D2C9E0D91DC724E600233A71 /* AppDelegate.m */,
 				D2C9E0DB1DC724E600233A71 /* ViewController.h */,
@@ -95,7 +98,7 @@
 		ED228D3134C0794F4267AD09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B5F2681040D5DA1E76DCFA7 /* Pods_RDPCrawler.framework */,
+				27271D2F927433DDA1925BC0 /* libPods-RDPCrawler.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27305501DED34870007E8E8 /* testPrivateKey.p12 in Resources */,
 				D2C9E0E51DC724E600233A71 /* LaunchScreen.storyboard in Resources */,
 				D2C9E0E21DC724E600233A71 /* Assets.xcassets in Resources */,
 			);
