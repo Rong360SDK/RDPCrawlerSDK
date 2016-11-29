@@ -1,8 +1,9 @@
 # RDPCrawlerSDK
 a crawler sdk of rong360
 
-接入步骤：
+需要先申请appid, 配置好相应的证书和回调url
 
+接入步骤：
 
 1.在Podfile文件里添加 pod 'RDPCrawlerSDK'
 
