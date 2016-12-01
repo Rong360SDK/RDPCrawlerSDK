@@ -5,8 +5,7 @@ a crawler sdk of rong360
 
 接入步骤：
 
-1.在Podfile文件里添加 pod 'RDPCrawlerSDK'
-
+1.在Podfile文件里添加 pod 'RDPCrawlerSDK', 然后pod update(需更新下本地pod仓库，避免本地仓库不包含sdk的信息)
 
 
 
