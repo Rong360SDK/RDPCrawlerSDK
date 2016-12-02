@@ -2,6 +2,7 @@
 a crawler sdk of rong360
 
 需要先申请appid, 配置好相应的证书和回调url
+PS:(debug版本连的是测试环境，release版本连的正式环境)
 
 接入步骤：
 
