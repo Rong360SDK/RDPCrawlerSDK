@@ -76,4 +76,12 @@
  */
 + (void)setTimeoutSecond:(NSInteger)second;
 
+
+/**
+ 设置是否使用测试环境(默认为不使用)
+
+ @param isDebug isDebug
+ */
++ (void)setIsDebug:(BOOL)isDebug;
+
 @end
