@@ -46,9 +46,12 @@ a crawler sdk of rong360
     如需使用测试环境联调，需调用[RDPCrawlerManager setIsDebug:YES]
 
     pem转p12的步骤，需在终端输入如下命令:
+
     如pem文件为private.pem
+
     
     (1) 生成一个csr文件
+
       openssl req -new -key private.pem -out rsacert.csr
 
       这时候要求输入以下一些证书配置信息
@@ -76,9 +79,14 @@ a crawler sdk of rong360
       An optional company name []:
 
 
+
    (2)生成证书并且签名,有效期10年
+
       openssl x509 -req -days 3650 -in rsacert.csr -signkey private.pem -out rsacert.crt
 
+
    (3)生成P12文件
+
       openssl pkcs12 -export -out private.p12 -inkey private.pem -in rsacert.crt
+
  
