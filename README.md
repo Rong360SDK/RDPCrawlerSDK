@@ -50,18 +50,31 @@ a crawler sdk of rong360
     
     (1) 生成一个csr文件
       openssl req -new -key private.pem -out rsacert.csr
+
       这时候要求输入以下一些证书配置信息
+
       Country Name (2 letter code) [AU]:CN
+
       State or Province Name (full name) [Some-State]:beijing
+
       Locality Name (eg, city) []:beijing
+
       Organization Name (eg, company) [Internet Widgits Pty Ltd]:Rong360
+
       Organizational Unit Name (eg, section) []:com
+
       Common Name (e.g. server FQDN or YOUR name) []:R360
+
       Email Address []:whj5484138@gmail.com
+
       Please enter the following 'extra' attributes
+
       to be sent with your certificate request
+
       A challenge password []:
+
       An optional company name []:
+
 
    (2)生成证书并且签名,有效期10年
       openssl x509 -req -days 3650 -in rsacert.csr -signkey private.pem -out rsacert.crt
