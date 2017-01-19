@@ -53,13 +53,23 @@
 + (void)startCrawlerByType:(kRDPCrawlerType)type identifier:(NSString *)taskId;
 
 /**
- 启动抓取服务
+ 启动(支付宝\淘宝)抓取服务
 
  @param type   抓取服务类型
  @param taskId 抓取服务的唯一标志符(可选)
  @param addtionalParams  附加参数(可选, 业务机构的一些自定义参数，会回传给业务机构服务器)
  */
 + (void)startCrawlerByType:(kRDPCrawlerType)type identifier:(NSString *)taskId addtionalParams:(NSDictionary *)addtionalParams;
+
+
+/**
+ 启动运营商抓取服务
+
+ @param config          运营商抓取配置
+ @param taskId          抓取服务的唯一标志符(可选)
+ @param addtionalParams 附加参数(可选, 业务机构的一些自定义参数，会回传给业务机构服务器)
+ */
++ (void)startCrawlerOperatorByConfig:(RDPC_OperatorConfig *)config identifier:(NSString *)taskId addtionalParams:(NSDictionary *)addtionalParams;
 
 /**
  配置可选信息
@@ -78,8 +88,8 @@
 
 
 /**
- 设置是否使用测试环境(默认为不使用)
-
+ 设置是否使用测试环境
+ 
  @param isDebug isDebug
  */
 + (void)setIsDebug:(BOOL)isDebug;

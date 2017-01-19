@@ -13,10 +13,12 @@
  
  - kCrawlerTypeAlipay: 支付宝抓取
  - kCrawlerTypeTaobao: 淘宝抓取
+ - kRDPCrawlerTypeOperator: 运营商抓取
  */
 typedef NS_ENUM(NSUInteger, kRDPCrawlerType) {
     kRDPCrawlerTypeAlipay = 1,
     kRDPCrawlerTypeTaobao = 2,
+    kRDPCrawlerTypeOperator = 3,
 };
 
 
@@ -92,3 +94,35 @@ typedef NS_ENUM(NSUInteger, kRDPCErrorCode) {
 @property (nonatomic, copy) NSDictionary *addtionParams;
 
 @end
+
+
+
+/**
+ 运营商配置信息
+ */
+@interface RDPC_OperatorConfig : NSObject
+
+
+/**
+ 手机号，必选参数
+ */
+@property (nonatomic, copy) NSString *phone;
+
+/**
+ 是否能修改手机号，默认YES
+ */
+@property (nonatomic, assign) BOOL canEditPhone;
+
+/**
+ 和手机号匹配的姓名，可选
+ */
+@property (nonatomic, copy) NSString *userName;
+
+/**
+ 和手机号匹配的身份证号，可选
+ */
+@property (nonatomic, copy) NSString *idNo;
+
+@end
+
+
