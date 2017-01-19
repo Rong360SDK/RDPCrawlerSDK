@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RDPCrawlerSDK"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "A RDPCrawlerSDK of rong360, use for crawler data"
 
   # This description is used to generate tags and improve search results.
@@ -25,18 +25,19 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   抓取数据的sdk，支持支付宝和淘宝，集成时需要在info.plist的LSApplicationQueriesSchemes添加scheme:alipayqr
+                   抓取数据的sdk，支持支付宝和淘宝，运营商,  添加命令 pod 'RDPCrawlerSDK'
                    DESC
 
   s.homepage     = "https://github.com/whj5484138/RDPCrawlerSDK"
   s.license      = "MIT"
   s.author             = { "wanghuijian" => "wanghuijian@rong360.com" }
-  s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/whj5484138/RDPCrawlerSDK.git", :tag => "1.0.5" }
+  s.ios.deployment_target = "7.1"
+  s.source       = { :git => "https://github.com/whj5484138/RDPCrawlerSDK.git", :tag => "1.1.2" }
   s.resource = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawler.bundle'
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
-  s.frameworks = 'UIKit'
-  s.library = 'z'
+  s.frameworks = 'UIKit', 'CFNetwork', 'Security'
+  s.library = 'z', 'icucore', 'sqlite3'
+
   s.requires_arc     = true
 
 end
