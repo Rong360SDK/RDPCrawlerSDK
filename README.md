@@ -11,20 +11,45 @@ a crawler sdk of rong360
 
 
 
-2.在工程中的info.plist中的添加LSApplicationQueriesSchemes数组,在数组里面添加一个支持的scheme:alipayqr, 如果支持了ATS, 需要对uiwebview和以下的域名放开限制:
+2.权限配置
+
+a.如果支持了ATS, 需要对uiwebview放开限制
+
+	<key>NSAllowsArbitraryLoadsInWebContent</key>
+	<true/>
+
+b.如果使用支付宝抓取，需要在工程中的info.plist中的添加LSApplicationQueriesSchemes数组,在数组里面添加一个支持的scheme:alipayqr
+
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>alipayqr</string>
+	</array>
+
+c.使用运营商时，如果支持了ATS,需要对以下域名放开限制
+
 10086.cn,
+
 10010.com,
+
 189.cn,
+
 chinamobile.com,
+
 telecomjs.com,
+
 ct10000.com,
+
 chinatelecom-ec.com
 
+
 plist配置：
-<key>NSAppTransportSecurity</key>
+
+    <key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
+		
 		<dict>
+		
 			<key>10086.cn</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -36,6 +61,7 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 			<key>10010.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -47,6 +73,7 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 			<key>189.cn</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -58,6 +85,7 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 			<key>chinamobile.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -69,6 +97,7 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 			<key>telecomjs.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -80,6 +109,7 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 			<key>ct10000.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -91,6 +121,7 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 			<key>chinatelecom-ec.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -102,9 +133,12 @@ plist配置：
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			
 		</dict>
+		
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
+		
 	</dict>
 
 
