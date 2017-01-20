@@ -22,6 +22,7 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.title = @"抓取demo";
     _tblView = [UITableView new];
     _tblView.dataSource = self;
     _tblView.delegate = self;
@@ -34,7 +35,7 @@
 }
 
 - (void)configData {
-    _sourceArray = [NSMutableArray arrayWithObjects:@(kRDPCrawlerTypeAlipay), @(kRDPCrawlerTypeTaobao), nil];
+    _sourceArray = [NSMutableArray arrayWithObjects:@(kRDPCrawlerTypeAlipay), @(kRDPCrawlerTypeTaobao), @(kRDPCrawlerTypeOperator), nil];
     [_tblView reloadData];
 }
 
@@ -71,6 +72,9 @@
             case kRDPCrawlerTypeTaobao:
             title = @"淘宝抓取";
             break;
+            case kRDPCrawlerTypeOperator:
+            title = @"运营商抓取";
+            break;
         default:
             break;
     }
@@ -85,7 +89,25 @@
     
     NSNumber *number = [_sourceArray objectAtIndex:indexPath.row];
     NSString *taskId = [NSString stringWithFormat:@"%ld", indexPath.row];
-    [RDPCrawlerManager startCrawlerByType:number.integerValue identifier:taskId addtionalParams:nil];
+    switch (number.integerValue) {
+        case kRDPCrawlerTypeAlipay:
+        case kRDPCrawlerTypeTaobao:
+        {
+            [RDPCrawlerManager startCrawlerByType:number.integerValue identifier:taskId addtionalParams:nil];
+            break;
+        }
+        case kRDPCrawlerTypeOperator:
+        {
+            RDPC_OperatorConfig *config = [RDPC_OperatorConfig new];
+            config.phone = @"13738061365";
+            config.canEditPhone = YES;
+            [RDPCrawlerManager startCrawlerOperatorByConfig:config identifier:taskId addtionalParams:nil];
+            break;
+        }
+        default:
+            break;
+    }
+   
 }
 
 @end
