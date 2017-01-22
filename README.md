@@ -169,7 +169,7 @@ plist配置：
   
   [RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeTaobao identifier:@"自定义的任务id"];
   
-  运营商抓取:
+  运营商抓取:
   
   RDPC_OperatorConfig *config = [RDPC_OperatorConfig new];
 
