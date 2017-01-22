@@ -168,8 +168,18 @@ plist配置：
   淘宝抓取:
   
   [RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeTaobao identifier:@"自定义的任务id"];
+  
+  运营商抓取:
+  
+  RDPC_OperatorConfig *config = [RDPC_OperatorConfig new];
 
+  config.phone = @"xxxxxxxxxx";
 
+  config.canEditPhone = YES;
+
+  [RDPCrawlerManager startCrawlerOperatorByConfig:config identifier:@"自定义的任务id" addtionalParams:nil];
+  
+  
   ps:
   
     如需使用测试环境联调，需调用[RDPCrawlerManager setIsDebug:YES]
