@@ -146,35 +146,35 @@ plist配置：
 
 3.初始化sdk, 调用接口传入appid和对应的p12格式的私钥    
 
-  NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"private" ofType:@"p12"];
+  	NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"private" ofType:@"p12"];
 
-  NSData *keyData = [NSData dataWithContentsOfFile:keyPath];
+ 	NSData *keyData = [NSData dataWithContentsOfFile:keyPath];
 
   如私钥文件没有设置密码调用以下方法：
-
-		[RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData];
+  
+  	[RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData];
  
   如私钥文件设置了密码调用另一个方法:
-
- 		[RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData password:@"私钥密码"];
+  
+  	[RDPCrawlerManager configAppId:@"申请的appid" delegate:self privateKey:keyData password:@"私钥密码"];
   
 
 4.调用所需类型的抓取服务
 
   支付宝抓取:
   
-  	 [RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeAlipay identifier:@"自定义的任务id"];
+  	[RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeAlipay identifier:@"自定义的任务id"];
   
   淘宝抓取:
   
-  	  [RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeTaobao identifier:@"自定义的任务id"];
+  	[RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeTaobao identifier:@"自定义的任务id"];
   
   运营商抓取:
   
-  	   RDPC_OperatorConfig *config = [RDPC_OperatorConfig new];  
-	   config.phone = @"xxxxxxxxxx";
-	   config.canEditPhone = YES;
-	   [RDPCrawlerManager startCrawlerOperatorByConfig:config identifier:@"自定义的任务id" addtionalParams:nil];
+  	  RDPC_OperatorConfig *config = [RDPC_OperatorConfig new];
+	  config.phone = @"xxxxxxxxxx";
+	  config.canEditPhone = YES;
+	  [RDPCrawlerManager startCrawlerOperatorByConfig:config identifier:@"自定义的任务id" addtionalParams:nil];
 	
   ps:
   
