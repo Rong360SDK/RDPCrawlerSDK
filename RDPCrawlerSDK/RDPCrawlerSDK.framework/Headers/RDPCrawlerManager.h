@@ -1,7 +1,7 @@
 //
 //  RDPCrawlerManager.h
 //  Pods
-//
+//  version 1.1.3 
 //  Created by whj on 16/10/10.
 //
 //
@@ -18,6 +18,12 @@
  @param statusItem 抓取状态的item
  */
 - (void)crawlerChangeStatus:(RDPCrawlerItem *)statusItem;
+
+@optional
+/**
+ 抓取页面Dissmiss的回调
+ */
+- (void)didControllerDismiss;
 
 @end
 
