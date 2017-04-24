@@ -23,7 +23,7 @@
 /**
  抓取页面Dissmiss的回调
  */
-- (void)didControllerDismiss;
+- (void)didControllerDismiss:(RDPCrawlerItem *)statusItem;
 
 @end
 
