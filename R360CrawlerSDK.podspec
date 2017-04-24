@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint RDPCrawlerSDK.podspec' to ensure this is a
+#  Be sure to run `pod spec lint R360CrawlerSDK.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "RDPCrawlerSDK"
+  s.name         = "R360CrawlerSDK"
   s.version      = "1.1.4"
-  s.summary      = "A RDPCrawlerSDK of rong360, use for crawler data"
+  s.summary      = "A R360CrawlerSDK of rong360, use for crawler data"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   抓取数据的sdk，支持支付宝和淘宝，运营商,  添加命令 pod 'RDPCrawlerSDK'
+                   抓取数据的sdk，支持支付宝和淘宝，运营商,  添加命令 pod 'R360CrawlerSDK'
                    DESC
 
   s.homepage     = "https://github.com/Rong360SDK/RDPCrawlerSDK"
