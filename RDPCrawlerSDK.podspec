@@ -28,11 +28,11 @@ Pod::Spec.new do |s|
                    抓取数据的sdk，支持支付宝和淘宝，运营商,  添加命令 pod 'RDPCrawlerSDK'
                    DESC
 
-  s.homepage     = "https://github.com/whj5484138/RDPCrawlerSDK"
+  s.homepage     = "https://github.com/Rong360SDK/RDPCrawlerSDK"
   s.license      = "MIT"
   s.author             = { "wanghuijian" => "wanghuijian@rong360.com" }
-  s.ios.deployment_target = "7.1"
-  s.source       = { :git => "https://github.com/whj5484138/RDPCrawlerSDK.git", :tag => "1.1.3" }
+  s.ios.deployment_target = "7.0"
+  s.source       = { :git => "https://github.com/Rong360SDK/RDPCrawlerSDK.git", :tag => "1.1.4" }
   s.resource = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawler.bundle'
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
   s.frameworks = 'UIKit', 'CFNetwork', 'Security'
