@@ -30,7 +30,7 @@
     //私钥和appid都是测试配置, 接入方请替换成自己的
     NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"testPrivateKey" ofType:@"p12"];
     NSData *keyData = [NSData dataWithContentsOfFile:keyPath];
-    [RDPCrawlerManager setIsDebug:YES];
+    [RDPCrawlerManager setIsDebug:NO];
     [RDPCrawlerManager configAppId:TEST_APP_ID delegate:self privateKey:keyData];
     
     return YES;
