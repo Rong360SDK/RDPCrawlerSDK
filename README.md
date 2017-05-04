@@ -1,13 +1,13 @@
-# RDPCrawlerSDK
+# R360CrawlerSDK
 a crawler sdk of rong360
 
-支持的iOS最低版本7.1, Xcode 8.0
+支持的iOS最低版本7.0, Xcode 8.0
 
 需要先申请appid, 配置好相应的证书和回调url
 
 接入步骤：
 
-1.在Podfile文件里添加 pod 'RDPCrawlerSDK', 然后pod update(需更新下本地pod仓库，避免本地仓库不包含sdk的信息)
+1.在Podfile文件里添加 pod 'R360CrawlerSDK', 然后pod update(需更新下本地pod仓库，避免本地仓库不包含sdk的信息)
 
 
 
