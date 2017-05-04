@@ -1,5 +1,6 @@
 #use_frameworks!
 
 target 'RDPCrawler' do
-    pod 'R360CrawlerSDK'
+#    pod 'R360CrawlerSDK', '1.1.4'
+  pod 'R360CrawlerSDK', :path => "../../"
 end
