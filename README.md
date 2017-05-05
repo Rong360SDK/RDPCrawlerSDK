@@ -138,6 +138,8 @@ plist配置：
 		
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>访问相册</string>
 		
 	</dict>
 
