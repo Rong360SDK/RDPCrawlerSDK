@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "R360CrawlerSDK"
-  s.version      = "1.1.4"
+  s.version      = "1.1.5"
   s.summary      = "A R360CrawlerSDK of rong360, use for crawler data"
 
   # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "wanghuijian" => "wanghuijian@rong360.com" }
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/Rong360SDK/RDPCrawlerSDK.git", :tag => "1.1.4" }
+  s.source       = { :git => "https://github.com/Rong360SDK/RDPCrawlerSDK.git", :tag => "1.1.5" }
   s.resource = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawler.bundle'
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
   s.frameworks = 'UIKit', 'CFNetwork', 'Security'

@@ -130,5 +130,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>访问相册，为了是保证用户的资金安全，需要用户主动上传身份证，避免套用他人身份进行贷款。</string>
 </dict>
 </plist>
