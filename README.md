@@ -1,6 +1,8 @@
 # R360CrawlerSDK
 a crawler sdk of rong360
 
+******Switft 参考：https://github.com/Rong360SDK/RDPCrawlerSDKSwift/blob/master/README.md
+
 支持的iOS最低版本7.0, Xcode 8.0
 
 需要先申请appid, 配置好相应的证书和回调url
