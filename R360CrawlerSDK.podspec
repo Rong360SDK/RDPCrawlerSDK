@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "R360CrawlerSDK"
-  s.version      = "1.1.8"
+  s.version      = "1.1.9"
   s.summary      = "A R360CrawlerSDK of rong360, use for crawler data"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   抓取数据的sdk，支持支付宝和淘宝，运营商,  添加命令 pod 'R360CrawlerSDK'
+                   抓取数据的sdk，支持支付宝和淘宝，运营商，邮箱,  添加命令 pod 'R360CrawlerSDK'
                    DESC
 
   s.homepage     = "https://github.com/Rong360SDK/RDPCrawlerSDK"
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
   s.frameworks = 'UIKit', 'CFNetwork', 'Security'
   s.library = 'z', 'icucore', 'sqlite3'
-
+  s.weak_frameworks = 'Photos'
   s.requires_arc     = true
 
 end

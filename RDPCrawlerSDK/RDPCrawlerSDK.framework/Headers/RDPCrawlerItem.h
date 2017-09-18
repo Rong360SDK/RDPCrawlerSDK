@@ -14,12 +14,14 @@
  - kCrawlerTypeAlipay: 支付宝抓取
  - kCrawlerTypeTaobao: 淘宝抓取
  - kRDPCrawlerTypeOperator: 运营商抓取
+ - kRDPCrawlerTypeEmail: 邮箱抓取
  */
-typedef enum:NSUInteger {
+typedef NS_ENUM(NSUInteger, kRDPCrawlerType) {
     kRDPCrawlerTypeAlipay = 1,
     kRDPCrawlerTypeTaobao = 2,
     kRDPCrawlerTypeOperator = 3,
-}kRDPCrawlerType;
+    kRDPCrawlerTypeEmail = 4,
+};
 
 
 /**
@@ -32,14 +34,14 @@ typedef enum:NSUInteger {
  - kCrawlerStatusFailed:       失败状态
  - kCrawlerStatusCancel:       手动取消
  */
-typedef enum:NSUInteger {
+typedef NS_ENUM(NSUInteger, kRDPCrawlerStatus) {
     kRDPCrawlerStatusIdle = 0,
     kRDPCrawlerStatusStart = 1,
     kRDPCrawlerStatusLoginSuccess = 2,
     kRDPCrawlerStatusFetchSuccess = 3,
     kRDPCrawlerStatusFailed = 4,
     kRDPCrawlerStatusCancel = 5,
-}kRDPCrawlerStatus;
+};
 
 
 /**
@@ -51,14 +53,14 @@ typedef enum:NSUInteger {
  - kRDPCErrorCodeCrawlerOutTime:  抓取数据超时
  - kRDPCErrorCodeCrawlerOther:    其它错误
  */
-typedef enum:NSUInteger {
+typedef NS_ENUM(NSUInteger, kRDPCErrorCode) {
     kRDPCErrorCodeInitParamError = 1001,
     kRDPCErrorCodeServerError = 1002,
     kRDPCErrorCodeUninstallAlipay = 1003,
     kRDPCErrorCodeCrawlerFailed = 1004,
     kRDPCErrorCodeCrawlerOutTime = 1005,
     kRDPCErrorCodeCrawlerOther = 1006,
-}kRDPCErrorCode;
+};
 
 @interface RDPCrawlerItem : NSObject
 

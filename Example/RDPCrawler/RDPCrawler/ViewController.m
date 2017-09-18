@@ -35,7 +35,7 @@
 }
 
 - (void)configData {
-    _sourceArray = [NSMutableArray arrayWithObjects:@(kRDPCrawlerTypeAlipay), @(kRDPCrawlerTypeTaobao), @(kRDPCrawlerTypeOperator), nil];
+    _sourceArray = [NSMutableArray arrayWithObjects:@(kRDPCrawlerTypeAlipay), @(kRDPCrawlerTypeTaobao), @(kRDPCrawlerTypeOperator),@(kRDPCrawlerTypeEmail), nil];
     [_tblView reloadData];
 }
 
@@ -75,6 +75,9 @@
             case kRDPCrawlerTypeOperator:
             title = @"运营商抓取";
             break;
+            case kRDPCrawlerTypeEmail:
+            title = @"邮箱抓取";
+            break;
         default:
             break;
     }
@@ -92,6 +95,7 @@
     switch (number.integerValue) {
         case kRDPCrawlerTypeAlipay:
         case kRDPCrawlerTypeTaobao:
+        case kRDPCrawlerTypeEmail:
         {
             [RDPCrawlerManager startCrawlerByType:number.integerValue identifier:taskId addtionalParams:nil];
             break;
