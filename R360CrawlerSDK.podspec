@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "wanghuijian" => "wanghuijian@rong360.com" }
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/Rong360SDK/RDPCrawlerSDK.git", :tag => "1.1.8" }
+  s.source       = { :git => "https://github.com/Rong360SDK/RDPCrawlerSDK.git", :tag => "1.1.9" }
   s.resource = 'RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawler.bundle'
   s.vendored_frameworks = 'RDPCrawlerSDK/RDPCrawlerSDK.framework'
   s.frameworks = 'UIKit', 'CFNetwork', 'Security'
