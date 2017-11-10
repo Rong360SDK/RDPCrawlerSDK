@@ -148,7 +148,7 @@ plist配置：
 
 
 
-3.初始化sdk, 调用接口传入appid和对应的p12格式的私钥    
+3.初始化sdk, 调用接口传入appid和对应的p12格式的私钥    
 
   	NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"private" ofType:@"p12"];
 
@@ -181,15 +181,19 @@ plist配置：
 	  [RDPCrawlerManager startCrawlerOperatorByConfig:config identifier:@"自定义的任务id" addtionalParams:nil];
 	
   邮箱抓取:
+	
 	[RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeEmail identifier:@"自定义的任务id" addtionalParams:nil];
 
 
   addtionalParams传入用户自己需要在抓取返回成功后回调的参数。目前版本需要传入用户三要素进行服务器端校验，即姓名real_name、身份证号id_card、手机号cellphone，如下，后面可以拼带自己所需要的参数
-  @{@"real_name":@"XXX",@"id_card":@"4222219820211062X",@"cellphone":@"13812345678"}
+  
+ @{@"real_name":@"XXX",@"id_card":@"4222219820211062X",@"cellphone":@"13812345678"}
+
 
 
 5.抓取结果
 	在抓取结果类实现RDPCrawlerDelegate，协议，并且实现协议的具体方法,其中RDPCrawlerItem.addtionParams 为抓取任务开始时传入的addtionalParams参数。
+	
 	- (void)crawlerChangeStatus:(RDPCrawlerItem *)statusItem {
     switch (statusItem.status) {
         case kRDPCrawlerStatusStart:
@@ -213,20 +217,20 @@ plist配置：
 	}
 
 	
-  ps:
+  ps:
   
-    如需使用测试环境联调，需调用[RDPCrawlerManager setIsDebug:YES]
+    如需使用测试环境联调，需调用[RDPCrawlerManager setIsDebug:YES]
 
-    pem转p12的步骤，需在终端输入如下命令:
+    pem转p12的步骤，需在终端输入如下命令:
 
     如pem文件为private.pem
 
     
-    (1) 生成一个csr文件
+    (1) 生成一个csr文件
 
       openssl req -new -key private.pem -out rsacert.csr
 
-      这时候要求输入以下一些证书配置信息
+      这时候要求输入以下一些证书配置信息
 
       Country Name (2 letter code) [AU]:CN
 
@@ -257,7 +261,7 @@ plist配置：
       openssl x509 -req -days 3650 -in rsacert.csr -signkey private.pem -out rsacert.crt
 
 
-   (3)生成P12文件
+   (3)生成P12文件
 
       openssl pkcs12 -export -out private.p12 -inkey private.pem -in rsacert.crt
 
