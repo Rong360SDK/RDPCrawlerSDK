@@ -180,6 +180,39 @@ plist配置：
 	  config.canEditPhone = YES;
 	  [RDPCrawlerManager startCrawlerOperatorByConfig:config identifier:@"自定义的任务id" addtionalParams:nil];
 	
+  邮箱抓取:
+	[RDPCrawlerManager startCrawlerByType:kRDPCrawlerTypeEmail identifier:@"自定义的任务id" addtionalParams:nil];
+
+
+  addtionalParams传入用户自己需要在抓取返回成功后回调的参数。目前版本需要传入用户三要素进行服务器端校验，即姓名real_name、身份证号id_card、手机号cellphone，如下，后面可以拼带自己所需要的参数
+  @{@"real_name":@"XXX",@"id_card":@"4222219820211062X",@"cellphone":@"13812345678"}
+
+
+5.抓取结果
+	在抓取结果类实现RDPCrawlerDelegate，协议，并且实现协议的具体方法,其中RDPCrawlerItem.addtionParams 为抓取任务开始时传入的addtionalParams参数。
+	- (void)crawlerChangeStatus:(RDPCrawlerItem *)statusItem {
+    switch (statusItem.status) {
+        case kRDPCrawlerStatusStart:
+            NSLog(@"分配到serverId,开始抓取");
+            break;
+        case kRDPCrawlerStatusLoginSuccess:
+            NSLog(@"登录成功");
+            break;
+        case kRDPCrawlerStatusFetchSuccess:
+            NSLog(@"获取数据成功, 抓取完成");
+            break;
+        case kRDPCrawlerStatusFailed:
+            NSLog(@"出现错误:%@", statusItem.error.domain);
+            break;
+        case kRDPCrawlerStatusCancel:
+            NSLog(@"用户手动取消任务");
+            break;
+        default:
+            break;
+    	}
+	}
+
+	
   ps:
   
     如需使用测试环境联调，需调用[RDPCrawlerManager setIsDebug:YES]
